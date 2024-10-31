@@ -1,12 +1,13 @@
-import subprocess
+import argparse
+import os
 import platform
 import re
-from typing import List, Dict, Optional
-import pandas as pd
-import numpy as np
+import subprocess
 from datetime import datetime
-import os
-import argparse
+from typing import Optional
+
+import numpy as np
+import pandas as pd
 
 
 class WiFiScanner:

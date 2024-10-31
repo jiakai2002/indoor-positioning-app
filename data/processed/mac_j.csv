@@ -1,0 +1,155 @@
+location,network_name,ssid_hex,bssid,channel_number,band,bandwidth,phy,rssi,security_type,encryption,age
+CommonArea,,,<redacted>,6,2GHz,20MHz,b/g/n,-92,WPA/WPA2,"aes_ccm, ccmp, tkip",0ms
+CommonArea,CS168-2138,43533136382d32313338,<redacted>,4,2GHz,20MHz,b/g,-86,WPA/WPA2,,0ms
+CommonArea,CS168-2160,43533136382d32313630,<redacted>,2,2GHz,20MHz,b/g,-76,WPA/WPA2,,0ms
+CommonArea,dlink-M920-dd51,646c696e6b2d4d3932302d64643531,<redacted>,8,2GHz,20MHz,b/g/n,-91,WPA/WPA2,aes_ccm,0ms
+CommonArea,E250-0528,453235302d30353238,<redacted>,4,2GHz,20MHz,b/g,-84,WPA/WPA2,,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-84,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,44,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,124,5GHz,40MHz,a/n/ac,-91,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,153,5GHz,40MHz,a/n/ac,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,1,2GHz,20MHz,g/n,-80,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-59,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-72,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,116,5GHz,40MHz,a/n/ac,-92,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,1,2GHz,20MHz,g/n,-85,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-87,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,52,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-79,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,44,5GHz,40MHz,a/n/ac,-81,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-64,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,136,5GHz,40MHz,a/n/ac,-61,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,1,2GHz,20MHz,g/n,-89,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,161,5GHz,40MHz,a/n/ac,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,eduroam,656475726f616d,<redacted>,40,5GHz,40MHz,a/n/ac,-81,WPA/WPA2,aes_ccm,0ms
+CommonArea,FB Staff-5G,46422053746166662d3547,<redacted>,36,5GHz,80MHz,a/n/ac/ax,-86,WPA/WPA2,aes_ccm,0ms
+CommonArea,Flourish Bakehouse,466c6f75726973682042616b65686f757365,<redacted>,11,2GHz,20MHz,b/g/n/ac/ax,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,Flourish Bakehouse,466c6f75726973682042616b65686f757365,<redacted>,36,5GHz,80MHz,a/n/ac/ax,-85,WPA/WPA2,aes_ccm,0ms
+CommonArea,IROAD_X5_1B6682,49524f41445f58355f314236363832,<redacted>,6,2GHz,20MHz,b/g/n,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,,,<redacted>,1,2GHz,20MHz,b/g/n/ac,-91,WPA/WPA2,aes_ccm,0ms
+CommonArea,Nanoleaf Aurora 50f513,4e616e6f6c656166204175726f726120353066353133,<redacted>,1,2GHz,20MHz,b/g/n,-92,WPA/WPA2,,0ms
+CommonArea,Pronto Arigato SMU (Guest),50726f6e746f204172696761746f20534d552028477565737429,<redacted>,4,2GHz,20MHz,b/g/n/ac/ax,-86,WPA/WPA2,aes_ccm,0ms
+CommonArea,QashierPOS_FlourishBakehouse,51617368696572504f535f466c6f757269736842616b65686f757365,<redacted>,4,2GHz,40MHz,b/g/n,-78,WPA/WPA2,aes_ccm,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,44,5GHz,40MHz,a/n/ac,-88,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,124,5GHz,40MHz,a/n/ac,-91,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,153,5GHz,40MHz,a/n/ac,-83,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,1,2GHz,20MHz,g/n,-81,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-59,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-73,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,116,5GHz,40MHz,a/n/ac,-90,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-80,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,52,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-79,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,44,5GHz,40MHz,a/n/ac,-80,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-54,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,136,5GHz,40MHz,a/n/ac,-61,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,161,5GHz,40MHz,a/n/ac,-82,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,1,2GHz,20MHz,g/n,-88,WPA/WPA2,,0ms
+CommonArea,SMU_Visitor,534d555f56697369746f72,<redacted>,40,5GHz,40MHz,a/n/ac,-85,WPA/WPA2,,0ms
+CommonArea,The Ramen Kitchen,5468652052616d656e204b69746368656e,<redacted>,1,2GHz,20MHz,b/g/n/ac/ax,-85,WPA/WPA2,aes_ccm,0ms
+CommonArea,Thinkware_0222663,5468696e6b776172655f30323232363633,<redacted>,6,2GHz,20MHz,b/g/n,-87,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-81,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,44,5GHz,40MHz,a/n/ac,-90,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-90,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,124,5GHz,40MHz,a/n/ac,-90,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,153,5GHz,40MHz,a/n/ac,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-81,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-59,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-90,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-73,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-77,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,116,5GHz,40MHz,a/n/ac,-90,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-86,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-79,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,52,5GHz,40MHz,a/n/ac,-85,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-78,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,44,5GHz,40MHz,a/n/ac,-81,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-56,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,136,5GHz,40MHz,a/n/ac,-61,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,161,5GHz,40MHz,a/n/ac,-82,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-87,WPA/WPA2,aes_ccm,0ms
+CommonArea,WLAN-SMU,574c414e2d534d55,<redacted>,40,5GHz,40MHz,a/n/ac,-81,WPA/WPA2,aes_ccm,0ms
+Stairs3,,,<redacted>,1,2GHz,40MHz,b/g/n,-87,WPA/WPA2,aes_ccm,0ms
+Stairs3,70mai_d06_eede,37306d61695f6430365f65656465,<redacted>,6,2GHz,20MHz,b/g/n,-85,WPA/WPA2,aes_ccm,0ms
+Stairs3,Blackvue900XPlus-E6C5FA,426c61636b76756539303058506c75732d453643354641,<redacted>,11,2GHz,40MHz,b/g/n,-83,WPA/WPA2,aes_ccm,0ms
+Stairs3,CS168-2138,43533136382d32313338,<redacted>,4,2GHz,20MHz,b/g,-85,WPA/WPA2,,0ms
+Stairs3,CS168-2160,43533136382d32313630,<redacted>,2,2GHz,20MHz,b/g,-77,WPA/WPA2,,0ms
+Stairs3,dlink-M920-e017,646c696e6b2d4d3932302d65303137,<redacted>,9,2GHz,20MHz,b/g/n,-88,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,44,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-83,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-79,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,153,5GHz,40MHz,a/n/ac,-71,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,48,5GHz,40MHz,a/n/ac,-88,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,1,2GHz,20MHz,g/n,-82,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,60,5GHz,40MHz,a/n/ac,-85,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-59,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,108,5GHz,40MHz,a/n/ac,-55,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-82,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-66,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,64,5GHz,40MHz,a/n/ac,-72,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,100,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,52,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,11,2GHz,20MHz,g/n,-71,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,44,5GHz,40MHz,a/n/ac,-76,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,6,2GHz,20MHz,g/n,-68,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,136,5GHz,40MHz,a/n/ac,-69,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,1,2GHz,20MHz,g/n,-83,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,161,5GHz,40MHz,a/n/ac,-69,WPA/WPA2,aes_ccm,0ms
+Stairs3,eduroam,656475726f616d,<redacted>,40,5GHz,40MHz,a/n/ac,-85,WPA/WPA2,aes_ccm,0ms
+Stairs3,FB Staff,4642205374616666,<redacted>,11,2GHz,20MHz,b/g/n/ac/ax,-83,WPA/WPA2,aes_ccm,0ms
+Stairs3,Flourish Bakehouse,466c6f75726973682042616b65686f757365,<redacted>,11,2GHz,20MHz,g/n/ac/ax,-80,WPA/WPA2,aes_ccm,0ms
+Stairs3,i-DRIVE_i12pro_0FA66F,692d44524956455f69313270726f5f304641363646,<redacted>,6,2GHz,20MHz,b/g/n,-87,WPA/WPA2,aes_ccm,0ms
+Stairs3,Lazada One,4c617a616461204f6e65,<redacted>,6,2GHz,20MHz,b/g/n,-83,WPA/WPA2,,0ms
+Stairs3,MARBELLA-KR9S 220d50,4d415242454c4c412d4b52395320323230643530,<redacted>,6,2GHz,20MHz,b/g/n,-91,WPA/WPA2,aes_ccm,0ms
+Stairs3,,,<redacted>,6,2GHz,20MHz,b/g/n/ac,-86,WPA/WPA2,aes_ccm,0ms
+Stairs3,Nanoleaf Aurora 50f513,4e616e6f6c656166204175726f726120353066353133,<redacted>,1,2GHz,20MHz,b/g/n,-88,WPA/WPA2,,0ms
+Stairs3,Pronto Arigato SMU (Guest),50726f6e746f204172696761746f20534d552028477565737429,<redacted>,4,2GHz,20MHz,b/g/n/ac/ax,-82,WPA/WPA2,aes_ccm,0ms
+Stairs3,Qashier POS,5161736869657220504f53,<redacted>,2,2GHz,40MHz,b/g/n,-87,WPA/WPA2,aes_ccm,0ms
+Stairs3,Redmi K60 Ultra,5265646d69204b363020556c747261,<redacted>,13,2GHz,20MHz,b/g/n/ac,-84,WPA/WPA2,aes_ccm,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,44,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-84,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-80,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,153,5GHz,40MHz,a/n/ac,-71,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,48,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,1,2GHz,20MHz,g/n,-82,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,60,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-67,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,108,5GHz,40MHz,a/n/ac,-55,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-82,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-67,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,64,5GHz,40MHz,a/n/ac,-72,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-87,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,100,5GHz,40MHz,a/n/ac,-87,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,52,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,11,2GHz,20MHz,g/n,-71,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,44,5GHz,40MHz,a/n/ac,-76,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,6,2GHz,20MHz,g/n,-69,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,136,5GHz,40MHz,a/n/ac,-69,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,1,2GHz,20MHz,g/n,-79,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,161,5GHz,40MHz,a/n/ac,-69,WPA/WPA2,,0ms
+Stairs3,SMU_Visitor,534d555f56697369746f72,<redacted>,40,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,,0ms
+Stairs3,Taycan_3641,54617963616e5f33363431,<redacted>,6,2GHz,20MHz,b/g/n,-87,WPA/WPA2,aes_ccm,0ms
+Stairs3,The Ramen Kitchen,5468652052616d656e204b69746368656e,<redacted>,1,2GHz,20MHz,b/g/n/ac/ax,-85,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,44,5GHz,40MHz,a/n/ac,-85,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-84,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-79,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,153,5GHz,40MHz,a/n/ac,-72,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,48,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-82,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,60,5GHz,40MHz,a/n/ac,-87,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-59,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,108,5GHz,40MHz,a/n/ac,-55,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-81,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-67,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,64,5GHz,40MHz,a/n/ac,-72,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-79,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,100,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,52,5GHz,40MHz,a/n/ac,-89,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,11,2GHz,20MHz,g/n,-71,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,44,5GHz,40MHz,a/n/ac,-77,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,6,2GHz,20MHz,g/n,-68,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,136,5GHz,40MHz,a/n/ac,-69,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,1,2GHz,20MHz,g/n,-83,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,161,5GHz,40MHz,a/n/ac,-68,WPA/WPA2,aes_ccm,0ms
+Stairs3,WLAN-SMU,574c414e2d534d55,<redacted>,40,5GHz,40MHz,a/n/ac,-86,WPA/WPA2,aes_ccm,0ms

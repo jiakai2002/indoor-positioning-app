@@ -1,0 +1,145 @@
+total=71, 5GHz=29, 2GHz=42, ibss=0, hidden=0, passpoint=0, airport=0
+
+
+'70mai_d05_174f' (37306d61695f6430355f31373466), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-92, rsn=[mcast=tkip, bip=none, ucast={ aes_ccm tkip }, auths={ psk }, mfp=no, caps=0xC], wpa=[mcast=tkip, ucast={ ccmp tkip }, auths={ psk }], wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'CS168-2138' (43533136382d32313338), bssid=<redacted>, channel=[4 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g (0xC), rssi=-86, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'CS168-2160' (43533136382d32313630), bssid=<redacted>, channel=[2 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g (0xC), rssi=-76, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'dlink-M920-dd51' (646c696e6b2d4d3932302d64643531), bssid=<redacted>, channel=[8 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-91, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk sae }, mfp=capable, caps=0x80], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'E250-0528' (453235302d30353238), bssid=<redacted>, channel=[4 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g (0xC), rssi=-84, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-84, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-89, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[124 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-91, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[153 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-80, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-59, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-72, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[116 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-92, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-85, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-87, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[52 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-86, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-79, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-64, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[136 (flags=0x114, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-61, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-89, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[161 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'eduroam' (656475726f616d), bssid=<redacted>, channel=[40 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'FB Staff-5G' (46422053746166662d3547), bssid=<redacted>, channel=[36 (flags=0x410, 5GHz, 80MHz)], cc=SG, phy=a/n/ac/ax (0x192), rssi=-86, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'Flourish Bakehouse' (466c6f75726973682042616b65686f757365), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=SG, phy=b/g/n/ac/ax (0x19C), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'Flourish Bakehouse' (466c6f75726973682042616b65686f757365), bssid=<redacted>, channel=[36 (flags=0x410, 5GHz, 80MHz)], cc=SG, phy=a/n/ac/ax (0x192), rssi=-85, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'IROAD_X5_1B6682' (49524f41445f58355f314236363832), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'JT's' (4a542773), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=SG, phy=b/g/n/ac (0x9C), rssi=-91, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'Nanoleaf Aurora 50f513' (4e616e6f6c656166204175726f726120353066353133), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-92, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'Pronto Arigato SMU (Guest)' (50726f6e746f204172696761746f20534d552028477565737429), bssid=<redacted>, channel=[4 (flags=0xA, 2GHz, 20MHz)], cc=US, phy=b/g/n/ac/ax (0x19C), rssi=-86, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk sae }, mfp=capable, caps=0x8C], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'QashierPOS_FlourishBakehouse' (51617368696572504f535f466c6f757269736842616b65686f757365), bssid=<redacted>, channel=[4 (flags=0x20C, 2GHz, 40MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-78, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0x0], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-88, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[124 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-91, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[153 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-83, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-81, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-59, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-73, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[116 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-90, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-80, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[52 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-86, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-79, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-80, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-54, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[136 (flags=0x114, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-61, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[161 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-82, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-88, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'SMU_Visitor' (534d555f56697369746f72), bssid=<redacted>, channel=[40 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-85, rsn=(null), wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'The Ramen Kitchen' (5468652052616d656e204b69746368656e), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n/ac/ax (0x19C), rssi=-85, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'Thinkware_0222663' (5468696e6b776172655f30323232363633), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=b/g/n (0x1C), rssi=-87, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-90, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-90, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[124 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-90, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[153 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-59, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-90, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-73, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-77, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[116 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-90, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-86, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-79, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[52 (flags=0x314, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-85, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[11 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-78, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[44 (flags=0x214, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[6 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-56, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[136 (flags=0x114, 5GHz, 40MHz, DFS)], cc=(null), phy=a/n/ac (0x92), rssi=-61, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[161 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-82, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[1 (flags=0xA, 2GHz, 20MHz)], cc=(null), phy=g/n (0x18), rssi=-87, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+
+'WLAN-SMU' (574c414e2d534d55), bssid=<redacted>, channel=[40 (flags=0x14, 5GHz, 40MHz)], cc=(null), phy=a/n/ac (0x92), rssi=-81, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], wpa=(null), wapi=no, wep=no, ibss=no, ph=no, swap=no, hs20=no, age=0ms, match=[(null)]
+

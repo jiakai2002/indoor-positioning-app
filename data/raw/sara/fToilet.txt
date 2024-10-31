@@ -1,0 +1,135 @@
+total=66, 6GHz(PSC)=0, 6GHz(NonPSC)=0, 5GHz(Active)=44, 5GHz(DFS)=0, 2GHz=22, ibss=1, hidden=0, passpoint=0, ph=0, airport=0
+
+
+BayView Hotel BH 1 - ssid=4261795669657720486f74656c2042482031 (2944157206), bssid=02:0d:3c:21:99:0d, security=open, channel=5g153/20, cc=(null), phy=a, rssi=-92, bi=100, ibss=yes, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=18:64:72:4c:9a:62, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-74, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=18:64:72:4c:9a:72, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g36/40, cc=(null), phy=n/ac, rssi=-74, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=18:64:72:5e:a9:62, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-87, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=18:64:72:5e:a9:72, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g149/40, cc=(null), phy=n/ac, rssi=-86, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:62:a0:31, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g112/40, cc=(null), phy=n/ac, rssi=-80, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:30:81, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-74, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:30:91, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g149/40, cc=(null), phy=n/ac, rssi=-74, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:4a:31, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g124/40, cc=(null), phy=n/ac, rssi=-76, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:4f:71, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g116/40, cc=(null), phy=n/ac, rssi=-95, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:50:a1, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g11/20, cc=(null), phy=n, rssi=-63, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:50:b1, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g153/40, cc=(null), phy=n/ac, rssi=-56, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:57:51, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g56/40, cc=(null), phy=n/ac, rssi=-73, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:6b:81, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g6/20, cc=(null), phy=n, rssi=-68, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:6b:91, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g60/40, cc=(null), phy=n/ac, rssi=-61, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b0:b8:67:63:7f:31, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g108/40, cc=(null), phy=n/ac, rssi=-84, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b4:5d:50:fe:41:82, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-81, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b4:5d:50:fe:41:92, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g100/40, cc=(null), phy=n/ac, rssi=-87, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b4:5d:50:fe:41:c2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g6/20, cc=(null), phy=n, rssi=-81, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=b4:5d:50:fe:41:d2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g52/40, cc=(null), phy=n/ac, rssi=-83, bi=100, age=0ms
+
+eduroam - ssid=656475726f616d (736968134), bssid=f0:5c:19:ba:be:f2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g40/40, cc=(null), phy=n/ac, rssi=-94, bi=100, age=0ms
+
+Galaxy A35 5G 21DE - ssid=47616c617879204133352035472032314445 (2617700046), bssid=86:7e:c9:50:15:80, security=wpa2-personal, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ psk }, mfp=no, caps=0xC], channel=2g11/20, cc=(null), phy=n, rssi=-94, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=18:64:72:4c:9a:61, security=open, channel=2g1/20, cc=(null), phy=n, rssi=-75, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=18:64:72:4c:9a:71, security=open, channel=5g36/40, cc=(null), phy=n/ac, rssi=-74, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=18:64:72:5e:a9:61, security=open, channel=2g1/20, cc=(null), phy=n, rssi=-87, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=18:64:72:5e:a9:71, security=open, channel=5g149/40, cc=(null), phy=n/ac, rssi=-86, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=38:17:c3:0c:7f:f0, security=open, channel=5g161/40, cc=(null), phy=n/ac, rssi=-92, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:62:a0:30, security=open, channel=5g112/40, cc=(null), phy=n/ac, rssi=-80, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:30:80, security=open, channel=2g1/20, cc=(null), phy=n, rssi=-73, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:30:90, security=open, channel=5g149/40, cc=(null), phy=n/ac, rssi=-74, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:4a:30, security=open, channel=5g124/40, cc=(null), phy=n/ac, rssi=-77, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:4f:70, security=open, channel=5g116/40, cc=(null), phy=n/ac, rssi=-95, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:50:a0, security=open, channel=2g11/20, cc=(null), phy=n, rssi=-63, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:50:b0, security=open, channel=5g153/40, cc=(null), phy=n/ac, rssi=-56, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:57:50, security=open, channel=5g56/40, cc=(null), phy=n/ac, rssi=-73, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:6b:80, security=open, channel=2g6/20, cc=(null), phy=n, rssi=-69, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:6b:90, security=open, channel=5g60/40, cc=(null), phy=n/ac, rssi=-61, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b0:b8:67:63:7f:30, security=open, channel=5g108/40, cc=(null), phy=n/ac, rssi=-84, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b4:5d:50:fe:41:90, security=open, channel=5g100/40, cc=(null), phy=n/ac, rssi=-86, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b4:5d:50:fe:41:c0, security=open, channel=2g6/20, cc=(null), phy=n, rssi=-80, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=b4:5d:50:fe:41:d0, security=open, channel=5g52/40, cc=(null), phy=n/ac, rssi=-83, bi=100, age=0ms
+
+SMU_Visitor - ssid=534d555f56697369746f72 (3446170871), bssid=f0:5c:19:ba:be:f1, security=open, channel=5g40/40, cc=(null), phy=n/ac, rssi=-94, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=18:64:72:4c:9a:60, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-74, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=18:64:72:4c:9a:70, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g36/40, cc=(null), phy=n/ac, rssi=-73, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=18:64:72:5e:a9:60, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-88, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=18:64:72:5e:a9:70, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g149/40, cc=(null), phy=n/ac, rssi=-86, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=38:17:c3:0c:7f:f1, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g161/40, cc=(null), phy=n/ac, rssi=-92, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:62:1f:b2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g120/40, cc=(null), phy=n/ac, rssi=-81, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:62:a0:32, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g112/40, cc=(null), phy=n/ac, rssi=-80, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:30:82, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-74, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:30:92, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g149/40, cc=(null), phy=n/ac, rssi=-74, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:4a:32, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g124/40, cc=(null), phy=n/ac, rssi=-76, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:50:a2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g11/20, cc=(null), phy=n, rssi=-63, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:50:b2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g153/40, cc=(null), phy=n/ac, rssi=-55, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:51:d2, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g64/40, cc=(null), phy=n/ac, rssi=-92, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:57:52, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g56/40, cc=(null), phy=n/ac, rssi=-73, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:63:92, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g60/40, cc=(null), phy=n/ac, rssi=-91, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:66:22, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g1/20, cc=(null), phy=n, rssi=-89, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:6b:82, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g6/20, cc=(null), phy=n, rssi=-69, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:6b:92, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g60/40, cc=(null), phy=n/ac, rssi=-61, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:7f:22, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g6/20, cc=(null), phy=n, rssi=-90, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b0:b8:67:63:7f:32, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g108/40, cc=(null), phy=n/ac, rssi=-84, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b4:5d:50:fe:41:91, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g100/40, cc=(null), phy=n/ac, rssi=-87, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b4:5d:50:fe:41:c1, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=2g6/20, cc=(null), phy=n, rssi=-81, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=b4:5d:50:fe:41:d1, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g52/40, cc=(null), phy=n/ac, rssi=-83, bi=100, age=0ms
+
+WLAN-SMU - ssid=574c414e2d534d55 (4175001187), bssid=f0:5c:19:ba:be:f0, security=wpa2-enterprise, rsn=[mcast=aes_ccm, bip=none, ucast={ aes_ccm }, auths={ 8021x }, mfp=no, caps=0x28], channel=5g40/40, cc=(null), phy=n/ac, rssi=-94, bi=100, age=0ms
+
