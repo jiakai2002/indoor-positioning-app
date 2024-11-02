@@ -10,6 +10,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from scipy.interpolate import griddata
+from pykalman import KalmanFilter
+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 
@@ -108,6 +110,19 @@ class WiFiPositioning:
         self.grid_x = np.linspace(0, self.grid_size, self.grid_size)
         self.grid_y = np.linspace(0, self.grid_size, self.grid_size)
         self.X, self.Y = np.meshgrid(self.grid_x, self.grid_y)
+
+    def _initialize_kalman_filter(self):
+        """Initialize the Kalman Filter for position estimation"""
+        initial_state_mean = [0, 0]  # Initial position guess
+        transition_matrix = [[1, 0], [0, 1]]  # No velocity state used for simplicity
+        observation_matrix = [[1, 0], [0, 1]]
+
+        kf = KalmanFilter(
+            initial_state_mean=initial_state_mean,
+            transition_matrices=transition_matrix,
+            observation_matrices=observation_matrix
+        )
+        return kf
 
     def process_wifi_data(self, data: pd.DataFrame):
         logging.info("Processing WiFi scan data...")
@@ -328,8 +343,6 @@ class WiFiPositioning:
         except Exception as e:
             logging.error(f"Error in visualization: {str(e)}")
 
-# [Previous code remains the same until the main function]
-
 def main():
     try:
         # Load and process data
@@ -352,6 +365,11 @@ def main():
 
         # keep only if contains SMU or eduroam
         filtered_data = filtered_data[filtered_data['ssid'].notna() & filtered_data['ssid'].str.contains('SMU|eduroam')]
+
+        # location counts for filtered data
+        location_counts = filtered_data['location'].value_counts()
+        print("\nSamples per location after filtering:")
+        print(location_counts)
 
         # Try stratified split first, fall back to random if necessary
         try:
