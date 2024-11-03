@@ -14,15 +14,29 @@ class OptimizedWifiTriangulation:
         self.ap_locations: Dict[str, Tuple[float, float]] = {}
         self.ap_stats: Dict[Tuple[str, str], Dict] = {}
         self.location_coords = {
-            'FToilet': (26, 13), 'GSR2-1': (25, 5), 'GSR2-3/2': (16, 2),
-            'GSR2-4': (16, 6), 'PrintingRoom': (28, 9), 'Stairs1': (31, 9),
-            'Stair2': (11, 8), 'LW2.1b': (30, 20), 'Lift2': (23, 21),
-            'Lift1': (20, 21), 'MToilet': (18, 11), 'Walkway': (15, 21),
-            'CommonArea': (13, 35), 'Stairs3': (12, 38), 'SR2-4b': (9, 40),
-            'SR2-4a': (9, 35), 'SR2-3b': (11, 30), 'GSR2-6': (11, 27),
-            'SR2-3a': (11, 25), 'SR2-2a': (11, 15), 'SR2-2b': (11, 20),
-            'SR2-1b': (11, 10), 'SR2-1a': (10, 6), 'Stairs2': (12, 8),
-            'LW2.1a': (28, 9)
+            'FToilet': (25, 14),
+            'GSR2-1': (25, 5),
+            'GSR2-3/2': (16, 3),
+            'GSR2-4': (16, 7),
+            'PrintingRoom': (27, 9),
+            'Stairs1': (31, 9),
+            'Stairs2': (12, 8),
+            'LW2.1b': (29, 20),
+            'Lift2': (23, 21),
+            'Lift1': (20, 21),
+            'MToilet': (18, 14),
+            'Walkway': (15, 21),
+            'CommonArea': (13, 35),
+            'Stairs3': (12, 38),
+            'SR2-4b': (9, 40),
+            'SR2-4a': (9, 34),
+            'SR2-3b': (11, 30),
+            'GSR2-6': (11, 27),
+            'SR2-3a': (11, 24),
+            'SR2-2a': (11, 16),
+            'SR2-2b': (11, 19),
+            'SR2-1b': (11, 11),
+            'SR2-1a': (9, 7)
         }
 
     def preprocess_training_data(self, train_df: pd.DataFrame) -> None:
