@@ -267,8 +267,8 @@ class OptimizedTriangulationEvaluator:
 def main():
     try:
         # Load datasets
-        train_path = Path.cwd() / 'data' / 'processed' / 'win_e_processed.csv'
-        test_path = Path.cwd() / 'data' / 'processed' / 'win_e_processed.csv'
+        train_path = Path.cwd() / 'data' / 'processed' / 'merged_dataset.csv'
+        test_path = Path.cwd() / 'data' / 'processed' / 'merged_dataset.csv'
 
         if not train_path.exists():
             raise FileNotFoundError(f"Training data not found at {train_path}")
