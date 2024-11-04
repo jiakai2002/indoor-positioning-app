@@ -1,17 +1,18 @@
+import logging
+import pickle
+from dataclasses import dataclass
+from typing import List, Tuple, Dict
+
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from dataclasses import dataclass
-from typing import List, Tuple, Dict, Optional
-from datetime import datetime
-import logging
+from scipy.interpolate import griddata
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from scipy.interpolate import griddata
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+
 
 @dataclass
 class AccessPoint:
@@ -26,6 +27,7 @@ class AccessPoint:
     def calculate_distance(self, rssi: float) -> float:
         """Calculate approximate distance using log-distance path loss model"""
         return 10 ** ((self.reference_power - rssi) / (10 * self.path_loss_exponent))
+
 
 class WiFiPositioning:
     """
@@ -70,6 +72,7 @@ class WiFiPositioning:
         visualize_results(results_df: pd.DataFrame, current_readings: pd.DataFrame, floor_plan_path: str = 'data/raw/floorplan.png'):
             Visualizes the positioning results and signal strength heatmap on a floor plan.
     """
+
     def __init__(self, grid_size: int = 50):
         self.ap_dict: Dict[str, AccessPoint] = {}
         self.grid_size = grid_size
@@ -169,7 +172,7 @@ class WiFiPositioning:
             self.fingerprints[location] = fingerprint
 
     def _calculate_similarity(self, current_readings: Dict[str, float],
-                            fingerprint: Dict[str, Dict]) -> float:
+                              fingerprint: Dict[str, Dict]) -> float:
         """Calculate improved similarity score using both RSSI and estimated distances"""
         common_aps = set(current_readings.keys()) & set(fingerprint.keys())
         if not common_aps:
@@ -265,7 +268,7 @@ class WiFiPositioning:
         return grid_z
 
     def visualize_results(self, results_df: pd.DataFrame, current_readings: pd.DataFrame,
-                         floor_plan_path: str = 'data/raw/floorplan.png'):
+                          floor_plan_path: str = 'data/raw/floorplan.png'):
         """Visualize results with heatmap overlay"""
         try:
             floor_plan = mpimg.imread(floor_plan_path)
@@ -278,19 +281,19 @@ class WiFiPositioning:
             actual_x = results_df['Actual X']
             actual_y = results_df['Actual Y']
             ax1.scatter(actual_x, actual_y, c='blue', marker='o', s=100,
-                       label='Actual Positions', alpha=0.7)
+                        label='Actual Positions', alpha=0.7)
 
             # Plot estimated positions
             estimated_x = results_df['Estimated X']
             estimated_y = results_df['Estimated Y']
             ax1.scatter(estimated_x, estimated_y, c='red', marker='x', s=100,
-                       label='Estimated Positions', alpha=0.7)
+                        label='Estimated Positions', alpha=0.7)
 
             # Draw connection lines
             for _, row in results_df.iterrows():
                 ax1.plot([row['Actual X'], row['Estimated X']],
-                        [row['Actual Y'], row['Estimated Y']],
-                        'g-', alpha=0.3)
+                         [row['Actual Y'], row['Estimated Y']],
+                         'g-', alpha=0.3)
 
             ax1.set_title('Positioning Results')
             ax1.legend()
@@ -327,6 +330,21 @@ class WiFiPositioning:
 
         except Exception as e:
             logging.error(f"Error in visualization: {str(e)}")
+
+    def save_model(self, file_path: str):
+        """Save the WiFiPositioning model to a file."""
+        with open(file_path, 'wb') as file:
+            pickle.dump(self, file)
+        logging.info(f"Model saved to {file_path}")
+
+    @staticmethod
+    def load_model(file_path: str):
+        """Load the WiFiPositioning model from a file."""
+        with open(file_path, 'rb') as file:
+            model = pickle.load(file)
+        logging.info(f"Model loaded from {file_path}")
+        return model
+
 
 def main():
     try:
@@ -376,6 +394,7 @@ def main():
         # Initialize and train positioning system
         positioning = WiFiPositioning()
         positioning.process_wifi_data(train_data)
+        positioning.save_model('wifi_positioning_model.pkl')
 
         # Test and collect results
         results = []
@@ -389,8 +408,8 @@ def main():
             actual_coords = positioning.location_coords[location]
 
             error_distance = np.sqrt(
-                (actual_coords[0] - estimated_coords[0])**2 +
-                (actual_coords[1] - estimated_coords[1])**2
+                (actual_coords[0] - estimated_coords[0]) ** 2 +
+                (actual_coords[1] - estimated_coords[1]) ** 2
             )
 
             results.append({
@@ -443,6 +462,7 @@ def main():
     except Exception as e:
         logging.error(f"Error in main: {str(e)}")
         raise  # Re-raise the exception to see the full traceback
+
 
 if __name__ == "__main__":
     main()
