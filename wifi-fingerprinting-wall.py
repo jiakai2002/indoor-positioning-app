@@ -296,83 +296,73 @@ class EnhancedWiFiPositioning:
         self._initialize_grid()
 
     def _initialize_wall_map(self) -> Dict[Tuple[str, str], List[WallInfo]]:
-        """Initialize wall information between locations with more accurate mapping"""
         wall_map = {}
 
-        # Study Room Wall Configurations
-        study_rooms = [
-            'SR2-1a', 'SR2-1b', 'SR2-2a', 'SR2-2b',
-            'SR2-3a', 'SR2-3b', 'SR2-4a', 'SR2-4b'
-        ]
-
-        # Glass walls facing walkway for all study rooms
-        for room in study_rooms:
-            wall_map[(room, 'Walkway')] = [
-                WallInfo(MaterialType.GLASS, 0.10, 1),  # Glass partition
-                WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)  # Supporting structure
-            ]
-
-        # Walls between adjacent study rooms
-        adjacent_pairs = [
-            ('SR2-1a', 'SR2-1b'), ('SR2-2a', 'SR2-2b'),
-            ('SR2-3a', 'SR2-3b'), ('SR2-4a', 'SR2-4b')
-        ]
-        for room1, room2 in adjacent_pairs:
-            wall_map[(room1, room2)] = [
-                WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
-            ]
-
-        # Group Study Room Walls
-        gsr_rooms = ['GSR2-1', 'GSR2-3/2', 'GSR2-4', 'GSR2-6']
-        for room in gsr_rooms:
+        # Study Room Walls to Walkway
+        for room in ['SR2-1a', 'SR2-1b', 'SR2-2a', 'SR2-2b', 'SR2-3a', 'SR2-3b', 'SR2-4a', 'SR2-4b']:
             wall_map[(room, 'Walkway')] = [
                 WallInfo(MaterialType.GLASS, 0.10, 1),
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Toilet Area Walls (heavily attenuating)
-        toilet_walls = {
+        # Adjacent Study Room Walls
+        for room1, room2 in [('SR2-1a', 'SR2-1b'), ('SR2-2a', 'SR2-2b'),
+                            ('SR2-3a', 'SR2-3b'), ('SR2-4a', 'SR2-4b')]:
+            wall_map[(room1, room2)] = [
+                WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
+            ]
+
+        # Group Study Room Walls to Walkway
+        for room in ['GSR2-1', 'GSR2-3/2', 'GSR2-4', 'GSR2-6']:
+            wall_map[(room, 'Walkway')] = [
+                WallInfo(MaterialType.GLASS, 0.10, 1),
+                WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
+            ]
+
+        # Toilet Area Walls
+        for toilet, adjacents in {
             'FToilet': ['Walkway', 'PrintingRoom', 'Stairs1'],
             'MToilet': ['Walkway', 'GSR2-1', 'PrintingRoom']
-        }
-        for toilet, adjacents in toilet_walls.items():
+        }.items():
             for adj in adjacents:
                 wall_map[(toilet, adj)] = [
-                    WallInfo(MaterialType.CONCRETE, 0.20, 1),  # Main wall
-                    WallInfo(MaterialType.METAL, 0.05, 1)  # Plumbing infrastructure
+                    WallInfo(MaterialType.CONCRETE, 0.20, 1),
+                    WallInfo(MaterialType.METAL, 0.05, 1)
                 ]
 
-        # Common Area to Walkway (mixed materials)
+        # Common Area to Walkway
         wall_map[('CommonArea', 'Walkway')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 2),  # Glass partitions
-            WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)  # Supporting structure
+            WallInfo(MaterialType.GLASS, 0.10, 2),
+            WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
         ]
 
-        # Lift and Stairs Areas (heavy concrete construction)
+        # Lift Walls to Walkway
         for lift in ['Lift1', 'Lift2']:
             wall_map[(lift, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1),
-                WallInfo(MaterialType.METAL, 0.10, 1)  # Lift machinery
+                WallInfo(MaterialType.METAL, 0.10, 1)
             ]
 
+        # Stair Walls to Walkway
         for stairs in ['Stairs1', 'Stairs2', 'Stairs3']:
             wall_map[(stairs, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1)
             ]
 
-        # PrintingRoom/LW2.1a area (mixed materials)
+        # Printing Room to LW2.1a
         wall_map[('PrintingRoom', 'LW2.1a')] = [
             WallInfo(MaterialType.PLASTERBOARD, 0.15, 1),
-            WallInfo(MaterialType.METAL, 0.05, 1)  # Printing equipment
+            WallInfo(MaterialType.METAL, 0.05, 1)
         ]
 
-        # Make wall map symmetric (if a->b exists, add b->a)
+        # Make wall map symmetric
         symmetric_map = {}
         for (loc1, loc2), walls in wall_map.items():
             symmetric_map[(loc2, loc1)] = walls
         wall_map.update(symmetric_map)
 
         return wall_map
+
 
     def calculate_wall_attenuation(self, from_location: str, to_location: str) -> float:
         """Calculate total wall attenuation between two locations"""
@@ -539,6 +529,24 @@ class EnhancedWiFiPositioning:
         grid_z = griddata(points, values, (self.X, self.Y), method='cubic', fill_value=-100)
         return grid_z
 
+    def estimate_location_nearest_neighbor(self, current_readings: pd.DataFrame) -> str:
+        """Estimate location using the strongest signal strength approach"""
+        current_rssi = {row['bssid']: row['dbm'] for _, row in current_readings.iterrows()}
+        max_similarity = float('-inf')
+        estimated_location = None
+
+        for location, fingerprint in self.fingerprints.items():
+            common_aps = set(current_rssi.keys()) & set(fingerprint.keys())
+            if not common_aps:
+                continue
+
+            similarity = sum(current_rssi[ap] for ap in common_aps)
+            if similarity > max_similarity:
+                max_similarity = similarity
+                estimated_location = location
+
+        return estimated_location
+
     def visualize_results(self, results_df: pd.DataFrame, current_readings: pd.DataFrame,
                          floor_plan_path: str = 'data/raw/floorplan.png'):
         """Visualize results with heatmap overlay"""
@@ -602,6 +610,58 @@ class EnhancedWiFiPositioning:
 
         except Exception as e:
             logging.error(f"Error in visualization: {str(e)}")
+
+def plot_error_cdf(results_df):
+    """Plot CDF of error distances"""
+    # Sorting error distances
+    error_distances = results_df['Error Distance'].dropna().sort_values().values
+
+    # Creating the CDF values
+    cdf_y = np.arange(1, len(error_distances)+1) / len(error_distances)
+
+    # Plotting the CDF
+    plt.figure(figsize=(10, 6))
+    plt.plot(error_distances, cdf_y, marker='.', linestyle='none')
+    plt.xlabel('Error Distance (units)')
+    plt.ylabel('Cumulative Probability')
+    plt.title('CDF of Error Distances')
+    plt.grid()
+    plt.show()
+
+    # Display summary statistics for interpretation
+    print("\nCDF Summary for Error Distances:")
+    percentiles = [25, 50, 75, 90, 95]
+    for p in percentiles:
+        print(f"{p}th Percentile: {np.percentile(error_distances, p):.2f} units")
+
+def plot_location_accuracy_heatmap(results_df, positioning, floor_plan_path='data/raw/floorplan.png'):
+    """Generate a location-based heatmap overlaying the floor plan to show error distances."""
+    # Load the floor plan image
+    floor_plan = mpimg.imread(floor_plan_path)
+
+    # Calculate mean error by location
+    error_by_location = results_df.groupby('Actual Location')['Error Distance'].mean()
+
+    # Prepare data for plotting
+    x_coords = [positioning.location_coords[loc][0] for loc in error_by_location.index]
+    y_coords = [positioning.location_coords[loc][1] for loc in error_by_location.index]
+    errors = error_by_location.values
+
+    # Plot setup
+    plt.figure(figsize=(12, 10))
+    plt.imshow(floor_plan, extent=[0, positioning.grid_size, 0, positioning.grid_size])
+
+    # Create scatter plot overlay for error distances
+    scatter = plt.scatter(x_coords, y_coords, c=errors, s=100, cmap='coolwarm', alpha=0.7)
+    plt.colorbar(scatter, label='Mean Error Distance (units)')
+
+    # Labels and title
+    plt.xlabel('X Coordinate')
+    plt.ylabel('Y Coordinate')
+    plt.title('Location-Based Error Heatmap Over Floor Plan')
+    plt.grid(False)
+
+    plt.show()
 
 
 def main():
@@ -669,6 +729,14 @@ def main():
                 (actual_coords[1] - estimated_coords[1])**2
             )
 
+            # Baseline estimation
+            baseline_location = positioning.estimate_location_nearest_neighbor(group)
+            baseline_coords = positioning.location_coords.get(baseline_location, (0.0, 0.0))
+            baseline_error = np.sqrt(
+                (actual_coords[0] - baseline_coords[0])**2 +
+                (actual_coords[1] - baseline_coords[1])**2
+            )
+
             results.append({
                 'Actual Location': location,
                 'Estimated Location': estimated_location,
@@ -676,7 +744,9 @@ def main():
                 'Actual Y': actual_coords[1],
                 'Estimated X': estimated_coords[0],
                 'Estimated Y': estimated_coords[1],
-                'Error Distance': error_distance
+                'Error Distance': error_distance,
+                'Baseline Location': baseline_location,
+                'Baseline Error Distance': baseline_error
             })
 
             print(f"Location: {location:15} | Estimated: {estimated_location:15} | "
@@ -697,6 +767,9 @@ def main():
             print("\nError Analysis by Location:")
             print(error_by_location)
 
+            plot_error_cdf(results_df)
+            plot_location_accuracy_heatmap(results_df, positioning)
+
             # Print overall statistics
             print("\nOverall Statistics:")
             print(f"Total Samples: {len(results_df)}")
@@ -713,6 +786,7 @@ def main():
             print(f"\nMaximum Error: {max_error['Error Distance']:.2f} units")
             print(f"Actual Location: {max_error['Actual Location']}")
             print(f"Estimated Location: {max_error['Estimated Location']}")
+
         else:
             print("No valid results to display")
 
