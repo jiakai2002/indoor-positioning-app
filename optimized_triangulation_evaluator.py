@@ -1,3 +1,4 @@
+import logging
 from collections import defaultdict
 from pathlib import Path
 from typing import List, Tuple, Dict
@@ -263,23 +264,133 @@ class OptimizedTriangulationEvaluator:
         except Exception as e:
             print(f"Error generating plots: {e}")
 
+    def generate_heatmap(self, current_readings: pd.DataFrame) -> np.ndarray:
+        """Generate signal strength heatmap data"""
+        grid = np.zeros((self.grid_size, self.grid_size))
+
+        # Group readings by location and calculate mean signal strength
+        location_strengths = current_readings.groupby('location')['dbm'].mean()
+
+        # Create heatmap based on signal strengths
+        for location, strength in location_strengths.items():
+            if location in self.location_coords:
+                x, y = self.location_coords[location]
+                # Ensure coordinates are within grid bounds
+                if 0 <= x < self.grid_size and 0 <= y < self.grid_size:
+                    grid[int(y), int(x)] = strength
+
+        # Apply Gaussian smoothing
+        from scipy.ndimage import gaussian_filter
+        smoothed_grid = gaussian_filter(grid, sigma=2)
+
+        return smoothed_grid
+
+    def visualize_results(self, floor_plan_path: str = 'data/raw/floorplan.png'):
+        """Visualize results with heatmap overlay"""
+        try:
+            if not self.results:
+                raise ValueError("No results available for visualization")
+
+            # Create results DataFrame
+            results_df = pd.DataFrame(self.results)
+
+            # Convert results to the format needed for visualization
+            viz_results_df = pd.DataFrame({
+                'Actual X': results_df['actual_x'],
+                'Actual Y': results_df['actual_y'],
+                'Estimated X': results_df['predicted_x'],
+                'Estimated Y': results_df['predicted_y'],
+                'Error Distance': results_df['euclidean_distance']
+            })
+
+            # Create figure and axes
+            fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 8))
+
+            # Plot 1: Results on coordinate system
+            # Plot actual positions
+            ax1.scatter(viz_results_df['Actual X'], viz_results_df['Actual Y'],
+                        c='blue', marker='o', s=100, label='Actual Positions', alpha=0.7)
+
+            # Plot estimated positions
+            ax1.scatter(viz_results_df['Estimated X'], viz_results_df['Estimated Y'],
+                        c='red', marker='x', s=100, label='Estimated Positions', alpha=0.7)
+
+            # Draw connection lines
+            for _, row in viz_results_df.iterrows():
+                ax1.plot([row['Actual X'], row['Estimated X']],
+                         [row['Actual Y'], row['Estimated Y']],
+                         'g-', alpha=0.3)
+
+            # Add location labels
+            for location, (x, y) in self.location_coords.items():
+                ax1.annotate(location, (x, y), fontsize=8, alpha=0.7)
+
+            ax1.set_title('Positioning Results')
+            ax1.legend()
+            ax1.grid(True)
+            ax1.set_xlabel('X Coordinate')
+            ax1.set_ylabel('Y Coordinate')
+
+            # Plot 2: Error heatmap
+            error_scatter = ax2.scatter(viz_results_df['Actual X'],
+                                        viz_results_df['Actual Y'],
+                                        c=viz_results_df['Error Distance'],
+                                        cmap='YlOrRd',
+                                        s=100,
+                                        alpha=0.7)
+            plt.colorbar(error_scatter, ax=ax2, label='Error Distance (units)')
+
+            # Add location labels to error heatmap
+            for location, (x, y) in self.location_coords.items():
+                ax2.annotate(location, (x, y), fontsize=8, alpha=0.7)
+
+            ax2.set_title('Error Heatmap')
+            ax2.grid(True)
+            ax2.set_xlabel('X Coordinate')
+            ax2.set_ylabel('Y Coordinate')
+
+            plt.tight_layout()
+            plt.show()
+
+            # Print error statistics
+            errors = viz_results_df['Error Distance'].dropna()
+            if len(errors) > 0:
+                print("\nError Statistics:")
+                print(f"Mean Error Distance: {errors.mean():.2f} units")
+                print(f"Median Error Distance: {errors.median():.2f} units")
+                print(f"Maximum Error Distance: {errors.max():.2f} units")
+                print(f"Standard Deviation: {errors.std():.2f} units")
+
+                # Calculate percentile errors
+                percentiles = [25, 50, 75, 90]
+                for p in percentiles:
+                    print(f"{p}th Percentile Error: {np.percentile(errors, p):.2f} units")
+
+        except Exception as e:
+            logging.error(f"Error in visualization: {str(e)}")
+
+    def save_results_to_csv(self, output_path: str = 'evaluation_results.csv'):
+        """Save evaluation results to CSV file"""
+        try:
+            if not self.results:
+                raise ValueError("No results available to save")
+
+            results_df = pd.DataFrame(self.results)
+            results_df.to_csv(output_path, index=False)
+            print(f"Results saved to {output_path}")
+
+        except Exception as e:
+            logging.error(f"Error saving results: {str(e)}")
+
 
 def main():
     try:
         # Load datasets
-        train_path = Path.cwd() / 'data' / 'processed' / 'merged_dataset.csv'
+        train_path = Path.cwd() / 'data' / 'processed' / 'processed_rain_dataset.csv'
         test_path = Path.cwd() / 'data' / 'processed' / 'merged_dataset.csv'
-
-        if not train_path.exists():
-            raise FileNotFoundError(f"Training data not found at {train_path}")
-        if not test_path.exists():
-            raise FileNotFoundError(f"Test data not found at {test_path}")
 
         train_df = pd.read_csv(train_path)
         test_df = pd.read_csv(test_path)
-
-        if train_df.empty or test_df.empty:
-            raise ValueError("One or both datasets are empty")
 
         # Initialize systems
         triangulator = OptimizedWifiTriangulation()
@@ -298,15 +409,11 @@ def main():
         print(f"Success rate: {metrics['success_rate']:.2%}")
 
         if metrics['successful_predictions'] > 0:
-            print(f"\nError Metrics:")
-            print(f"Mean Error: {metrics.get('mean_euclidean_error', float('nan')):.2f} units")
-            print(f"Median Error: {metrics.get('median_euclidean_error', float('nan')):.2f} units")
-            print(f"RMSE: {metrics.get('rmse', float('nan')):.2f} units")
-            print(f"Mean AP Count: {metrics.get('mean_ap_count', 0):.1f}")
+            # Visualize results
+            evaluator.visualize_results()
 
-            # Generate plots
-            print("\nGenerating visualization plots...")
-            evaluator.plot_enhanced_visualizations('evaluation_plots')
+            # Save results to CSV
+            evaluator.save_results_to_csv()
 
     except Exception as e:
         print(f"\nError in main evaluation routine: {e}")

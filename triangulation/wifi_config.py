@@ -1,35 +1,35 @@
 class OptimizedWifiConfig:
     def __init__(self):
-        # Path loss model parameters - adjusted for weaker but more stable signals
+        # Path loss model parameters - adjusted for larger dataset
         self.path_loss_models = {
-            'free_space': 2.0,  # Reduced for better accuracy with strongest signals
-            'indoor_los': 2.5,  # Adjusted for -56.5 to -80 range
-            'indoor_soft': 3.0,  # Optimized for -80 to -89 range
-            'indoor_hard': 3.5  # Adjusted for very weak signals (<-89)
+            'free_space': 2.1,  # Adjusted for strong signals (-50.5 to -80)
+            'indoor_los': 2.6,  # For -80 to -85.5 range
+            'indoor_soft': 3.1,  # For -85.5 to -90 range
+            'indoor_hard': 3.6   # For very weak signals (<-90)
         }
 
-        # Signal strength thresholds - based on new quartile analysis
-        self.los_threshold = -80  # 75th percentile for strong signals
-        self.soft_threshold = -89  # 25th percentile for moderate signals
+        # Signal strength thresholds - based on quartile analysis
+        self.los_threshold = -80    # 75th percentile for strong signals
+        self.soft_threshold = -85.5  # Median for moderate signals
 
-        # AP reliability parameters - adjusted for more stable environment
-        self.min_readings = 1  # Reduced due to more consistent readings
-        self.max_std_dev = 9.0  # Slightly above measured std (8.76)
-        self.max_signal_range = 25  # Adjusted based on new range (-96 to -56.5)
+        # AP reliability parameters - adjusted for larger dataset
+        self.min_readings = 3       # Increased due to larger dataset
+        self.max_std_dev = 10.0     # Slightly above measured std (9.67)
+        self.max_signal_range = 30  # Adjusted for wider range (-96 to -50.5)
 
         # Position estimation parameters
-        self.signal_variance_weight = 0.8  # Increased due to more consistent signals
-        self.distance_weight = 0.2  # Decreased accordingly
-        self.min_aps_for_estimation = 3  # Maintained for coverage
-        self.confidence_normalization = 4.0  # Adjusted for narrower signal range
+        self.signal_variance_weight = 0.75  # Balanced for larger dataset
+        self.distance_weight = 0.25         # Complementary weight
+        self.min_aps_for_estimation = 4     # Increased due to more data
+        self.confidence_normalization = 6.0  # Adjusted for larger dataset
 
         # Signal quality calculation
-        self.signal_strength_offset = 110  # Adjusted for weaker signal range
-        self.stability_factor = 1.0  # Reduced due to lower standard deviation
+        self.signal_strength_offset = 105   # Adjusted for signal range
+        self.stability_factor = 1.2         # Slightly increased for larger dataset
 
         # Reference power adjustments
-        self.reference_power_offset = -83  # Set to mean signal strength
-        self.min_reliable_power = -89  # Set to 25th percentile
+        self.reference_power_offset = -82.75 # Set to mean signal strength
+        self.min_reliable_power = -90        # Set to 25th percentile
 
         # Grid parameters - unchanged
         self.grid_max_x = 49
