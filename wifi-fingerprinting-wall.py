@@ -298,28 +298,28 @@ class EnhancedWiFiPositioning:
     def _initialize_wall_map(self) -> Dict[Tuple[str, str], List[WallInfo]]:
         wall_map = {}
 
-        # Study Room Walls to Walkway
+        # Study Room Walls to Walkway (assume some glass walls are here as annotated)
         for room in ['SR2-1a', 'SR2-1b', 'SR2-2a', 'SR2-2b', 'SR2-3a', 'SR2-3b', 'SR2-4a', 'SR2-4b']:
             wall_map[(room, 'Walkway')] = [
                 WallInfo(MaterialType.GLASS, 0.10, 1),
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Adjacent Study Room Walls
+        # Adjacent Study Room Walls (plasterboard walls)
         for room1, room2 in [('SR2-1a', 'SR2-1b'), ('SR2-2a', 'SR2-2b'),
                             ('SR2-3a', 'SR2-3b'), ('SR2-4a', 'SR2-4b')]:
             wall_map[(room1, room2)] = [
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Group Study Room Walls to Walkway
+        # Group Study Room Walls to Walkway (with glass walls as annotated)
         for room in ['GSR2-1', 'GSR2-3/2', 'GSR2-4', 'GSR2-6']:
             wall_map[(room, 'Walkway')] = [
                 WallInfo(MaterialType.GLASS, 0.10, 1),
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Toilet Area Walls
+        # Toilet Area Walls (assuming concrete and metal walls as before)
         for toilet, adjacents in {
             'FToilet': ['Walkway', 'PrintingRoom', 'Stairs1'],
             'MToilet': ['Walkway', 'GSR2-1', 'PrintingRoom']
@@ -330,39 +330,50 @@ class EnhancedWiFiPositioning:
                     WallInfo(MaterialType.METAL, 0.05, 1)
                 ]
 
-        # Common Area to Walkway
+        # Common Area to Walkway (glass and plasterboard walls as annotated)
         wall_map[('CommonArea', 'Walkway')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 2),
+            WallInfo(MaterialType.GLASS, 0.10, 2),  # Double glass wall for higher attenuation
             WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
         ]
 
-        # Lift Walls to Walkway
+        # Lift Walls to Walkway (concrete and metal for structural integrity)
         for lift in ['Lift1', 'Lift2']:
             wall_map[(lift, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1),
                 WallInfo(MaterialType.METAL, 0.10, 1)
             ]
 
-        # Stair Walls to Walkway
+        # Stairs Walls to Walkway (assuming concrete walls for staircases)
         for stairs in ['Stairs1', 'Stairs2', 'Stairs3']:
             wall_map[(stairs, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1)
             ]
 
-        # Printing Room to LW2.1a
+        # Printing Room to LW2.1a (plasterboard and metal)
         wall_map[('PrintingRoom', 'LW2.1a')] = [
             WallInfo(MaterialType.PLASTERBOARD, 0.15, 1),
             WallInfo(MaterialType.METAL, 0.05, 1)
         ]
 
-        # Make wall map symmetric
+        # Additional Glass Walls as Annotated in Floor Plan
+        # Adding the new locations with glass based on the annotation in your floor plan:
+        wall_map[('Walkway', 'GSR2-4')] = [
+            WallInfo(MaterialType.GLASS, 0.10, 1)
+        ]
+        wall_map[('Walkway', 'GSR2-1')] = [
+            WallInfo(MaterialType.GLASS, 0.10, 1)
+        ]
+        wall_map[('Walkway', 'LW2.1b')] = [
+            WallInfo(MaterialType.GLASS, 0.10, 1)
+        ]
+
+        # Make wall map symmetric to ensure bi-directional lookup
         symmetric_map = {}
         for (loc1, loc2), walls in wall_map.items():
             symmetric_map[(loc2, loc1)] = walls
         wall_map.update(symmetric_map)
 
         return wall_map
-
 
     def calculate_wall_attenuation(self, from_location: str, to_location: str) -> float:
         """Calculate total wall attenuation between two locations"""
@@ -698,7 +709,7 @@ def main():
                 filtered_data,
                 test_size=0.2,
                 stratify=filtered_data['location'],
-                random_state=69
+                random_state=41
             )
             print("Using stratified split")
         except ValueError as e:
@@ -706,7 +717,7 @@ def main():
             train_data, test_data = train_test_split(
                 filtered_data,
                 test_size=0.2,
-                random_state=69
+                random_state=41
             )
 
         # Initialize and train positioning system
