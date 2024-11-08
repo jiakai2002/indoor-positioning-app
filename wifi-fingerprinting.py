@@ -380,7 +380,7 @@ def main():
                 filtered_data,
                 test_size=0.2,
                 stratify=filtered_data['location'],
-                random_state=69
+                random_state=41
             )
             print("Using stratified split")
         except ValueError as e:
@@ -388,7 +388,7 @@ def main():
             train_data, test_data = train_test_split(
                 filtered_data,
                 test_size=0.2,
-                random_state=69
+                random_state=41
             )
 
         # Initialize and train positioning system

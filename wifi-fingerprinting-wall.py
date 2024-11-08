@@ -11,12 +11,13 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from scipy.interpolate import griddata
 from enum import Enum
+import matplotlib.patches as patches
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 
 class MaterialType(Enum):
     """Enumeration of different wall/floor materials and their attenuation factors"""
-    CONCRETE = 12.0  # dB
+    CONCRETE = 12.0
     BRICK = 8.0
     PLASTERBOARD = 5.0
     GLASS = 2.0
@@ -298,28 +299,28 @@ class EnhancedWiFiPositioning:
     def _initialize_wall_map(self) -> Dict[Tuple[str, str], List[WallInfo]]:
         wall_map = {}
 
-        # Study Room Walls to Walkway (assume some glass walls are here as annotated)
+        # Study Room Walls to Walkway
         for room in ['SR2-1a', 'SR2-1b', 'SR2-2a', 'SR2-2b', 'SR2-3a', 'SR2-3b', 'SR2-4a', 'SR2-4b']:
             wall_map[(room, 'Walkway')] = [
                 WallInfo(MaterialType.GLASS, 0.10, 1),
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Adjacent Study Room Walls (plasterboard walls)
+        # Adjacent Study Room Walls
         for room1, room2 in [('SR2-1a', 'SR2-1b'), ('SR2-2a', 'SR2-2b'),
                             ('SR2-3a', 'SR2-3b'), ('SR2-4a', 'SR2-4b')]:
             wall_map[(room1, room2)] = [
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Group Study Room Walls to Walkway (with glass walls as annotated)
+        # Group Study Room Walls to Walkway
         for room in ['GSR2-1', 'GSR2-3/2', 'GSR2-4', 'GSR2-6']:
             wall_map[(room, 'Walkway')] = [
                 WallInfo(MaterialType.GLASS, 0.10, 1),
                 WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
             ]
 
-        # Toilet Area Walls (assuming concrete and metal walls as before)
+        # Toilet Area Walls
         for toilet, adjacents in {
             'FToilet': ['Walkway', 'PrintingRoom', 'Stairs1'],
             'MToilet': ['Walkway', 'GSR2-1', 'PrintingRoom']
@@ -330,50 +331,39 @@ class EnhancedWiFiPositioning:
                     WallInfo(MaterialType.METAL, 0.05, 1)
                 ]
 
-        # Common Area to Walkway (glass and plasterboard walls as annotated)
+        # Common Area to Walkway
         wall_map[('CommonArea', 'Walkway')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 2),  # Double glass wall for higher attenuation
+            WallInfo(MaterialType.GLASS, 0.10, 2),
             WallInfo(MaterialType.PLASTERBOARD, 0.15, 1)
         ]
 
-        # Lift Walls to Walkway (concrete and metal for structural integrity)
+        # Lift Walls to Walkway
         for lift in ['Lift1', 'Lift2']:
             wall_map[(lift, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1),
                 WallInfo(MaterialType.METAL, 0.10, 1)
             ]
 
-        # Stairs Walls to Walkway (assuming concrete walls for staircases)
+        # Stair Walls to Walkway
         for stairs in ['Stairs1', 'Stairs2', 'Stairs3']:
             wall_map[(stairs, 'Walkway')] = [
                 WallInfo(MaterialType.CONCRETE, 0.25, 1)
             ]
 
-        # Printing Room to LW2.1a (plasterboard and metal)
+        # Printing Room to LW2.1a
         wall_map[('PrintingRoom', 'LW2.1a')] = [
             WallInfo(MaterialType.PLASTERBOARD, 0.15, 1),
             WallInfo(MaterialType.METAL, 0.05, 1)
         ]
 
-        # Additional Glass Walls as Annotated in Floor Plan
-        # Adding the new locations with glass based on the annotation in your floor plan:
-        wall_map[('Walkway', 'GSR2-4')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 1)
-        ]
-        wall_map[('Walkway', 'GSR2-1')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 1)
-        ]
-        wall_map[('Walkway', 'LW2.1b')] = [
-            WallInfo(MaterialType.GLASS, 0.10, 1)
-        ]
-
-        # Make wall map symmetric to ensure bi-directional lookup
+        # Make wall map symmetric
         symmetric_map = {}
         for (loc1, loc2), walls in wall_map.items():
             symmetric_map[(loc2, loc1)] = walls
         wall_map.update(symmetric_map)
 
         return wall_map
+
 
     def calculate_wall_attenuation(self, from_location: str, to_location: str) -> float:
         """Calculate total wall attenuation between two locations"""
@@ -674,6 +664,62 @@ def plot_location_accuracy_heatmap(results_df, positioning, floor_plan_path='dat
 
     plt.show()
 
+def generate_structured_signal_heatmap(data: pd.DataFrame, floor_plan_path: str, location_coords: dict, grid_size: int = 50):
+    """
+    Generates a structured Wi-Fi signal strength heatmap overlayed on a floor plan,
+    with labeled rooms and color coding.
+
+    Parameters:
+    - data (pd.DataFrame): DataFrame containing Wi-Fi scan data.
+    - floor_plan_path (str): Path to the floor plan image.
+    - location_coords (dict): Dictionary mapping location names to (x, y) coordinates on the floor plan.
+    - grid_size (int): Size of the grid for interpolation (default is 50).
+    """
+    # Calculate the average RSSI per location
+    avg_rssi_per_location = data.groupby('location')['dbm'].mean().reset_index()
+
+    # Map location names to coordinates
+    avg_rssi_per_location['x'] = avg_rssi_per_location['location'].apply(lambda loc: location_coords.get(loc, (np.nan, np.nan))[0])
+    avg_rssi_per_location['y'] = avg_rssi_per_location['location'].apply(lambda loc: location_coords.get(loc, (np.nan, np.nan))[1])
+
+    # Filter out locations with undefined coordinates
+    avg_rssi_per_location = avg_rssi_per_location.dropna(subset=['x', 'y'])
+
+    # Prepare data for interpolation
+    measurement_points = avg_rssi_per_location[['x', 'y']].values
+    signal_strengths = avg_rssi_per_location['dbm'].values
+
+    # Create grid for interpolation
+    grid_x, grid_y = np.mgrid[0:grid_size:50j, 0:grid_size:50j]
+
+    # Interpolate signal data over grid
+    interpolated_signal = griddata(measurement_points, signal_strengths, (grid_x, grid_y),
+                                method='cubic', fill_value=-120)  # -120 dBm for "out of range"
+
+    # Load floor plan image
+    floor_plan = mpimg.imread(floor_plan_path)
+
+    # Plotting
+    fig, ax = plt.subplots(figsize=(12, 10))
+    ax.imshow(floor_plan, extent=(0, grid_size, 0, grid_size), aspect='auto')  # Set extent to match floor plan dimensions
+    heatmap = ax.imshow(interpolated_signal.T, extent=(0, grid_size, 0, grid_size), origin='lower', cmap='coolwarm', alpha=0.6)
+    plt.colorbar(heatmap, label='Signal Strength (dBm)', boundaries=[-120, -110, -100, -90, -80, -70, -60])
+
+    # Add room labels and borders
+    for room, coords in location_coords.items():
+        # Define room boundaries (can adjust size as per requirements)
+        room_rect = patches.Rectangle((coords[0] - 2.5, coords[1] - 2.5), 5, 5, linewidth=1, edgecolor='white', facecolor='none')
+        ax.add_patch(room_rect)
+
+        # Add room markers
+        ax.text(coords[0], coords[1], room, color='white', ha='center', va='center',
+                bbox=dict(facecolor='black', edgecolor='none', boxstyle='round,pad=0.3'), fontsize=8, weight='bold')
+
+    plt.title('Wi-Fi Signal Strength Characterization')
+    plt.xlabel('X Coordinate')
+    plt.ylabel('Y Coordinate')
+    plt.grid(False)
+    plt.show()
 
 def main():
     try:
@@ -780,6 +826,8 @@ def main():
 
             plot_error_cdf(results_df)
             plot_location_accuracy_heatmap(results_df, positioning)
+            generate_structured_signal_heatmap(data, 'data/raw/floorplan.png', positioning.location_coords)
+
 
             # Print overall statistics
             print("\nOverall Statistics:")
