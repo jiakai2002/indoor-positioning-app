@@ -1,8 +1,16 @@
 # Client Device Localization
 
 ## Introduction
-This project is aimed at providing localization support for client devices using Python and PowerShell.
+This project, conducted as part of the CS204 Interconnection of Cyber-Physical Systems module focusing on developing a Wi-Fi-based Indoor Positioning System (IPS). The project leverages ubiquitous Wi-Fi access points (APs) to estimate device locations in complex indoor environments.
 
+The system implements two primary approaches:
+
+1. Trilateration: Adapting RSSI-based distance estimation to calculate positions despite limited AP location data, addressing challenges such as signal obstructions and multipath propagation.
+2. Fingerprinting: Using a robust dataset of Wi-Fi signal characteristics, enhanced by wall attenuation factors and propagation models, to achieve accurate room-level localisation.
+
+### Resources
+- [Presentation Slides](https://www.canva.com/design/DAGVJHuiyzk/1tmhyqmmRfmP9x_EzPF_0A/view?utm_content=DAGVJHuiyzk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h35a02c09b2)
+- [Project Writeup](https://docs.google.com/document/d/12iGJxx6Ph6M9xVskmqYziKfGx7mADjZC-U3LoF9-_3U/edit?usp=sharing)
 
 ### Files and Directories
 
