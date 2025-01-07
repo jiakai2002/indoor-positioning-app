@@ -14,7 +14,7 @@ The system implements two primary approaches:
 
 ### Files and Directories
 
-- **`.gitignore`**: Specifies files and directories to be ignored by Git
+- **`.gitignore`**: Specifies files and directories to be ignored by Git.
 - **`output/`**: Directory where output files are saved.
 - **`requirements.txt`**: Lists Python dependencies.
 - **`tools/NetworkScanv3.ps1`**: PowerShell script for data collection
