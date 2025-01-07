@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdic
 from pathlib import Path
 from typing import List, Tuple, Dict
 
